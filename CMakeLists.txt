@@ -37,4 +37,7 @@ add_executable(client
     csocket.cc
     tile.cc
 )
+if(WIN32)
+    target_link_libraries(client wsock32 ws2_32)
+endif()
 

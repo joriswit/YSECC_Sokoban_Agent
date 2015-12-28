@@ -5,6 +5,7 @@
 #include <stdlib.h>
 
 #ifdef _WIN32
+#define NOMINMAX
 #include <WinSock2.h>
 #include <Windows.h>
 #include <time.h>
