@@ -1,0 +1,7 @@
+LIBRARY YSECC_Sokoban_Agent
+EXPORTS
+   SolveEx
+   GetConstraints
+   GetPluginName
+   Configure
+   ShowAbout

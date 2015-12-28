@@ -1,4 +1,4 @@
-
+include(GenerateExportHeader)
 cmake_minimum_required(VERSION 2.6)
 project(HW1)
 
@@ -41,3 +41,15 @@ if(WIN32)
     target_link_libraries(client wsock32 ws2_32)
 endif()
 
+if(WIN32)
+    add_library(YSECC_Sokoban_Agent SHARED
+        plugin.cc
+        direction.cc
+        search.cc
+        maze.cc
+        node.cc
+        tile.cc
+        YSECC_Sokoban_Agent.def
+    )
+    generate_export_header( YSECC_Sokoban_Agent)
+endif()
